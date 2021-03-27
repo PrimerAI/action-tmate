@@ -13,3 +13,7 @@ inputs:
     description: 'If only the public SSH keys of the user triggering the workflow should be authorized'
     required: false
     default: 'false'
+  install-linux-dependencies:
+    description: 'this step install installation of any dependencies for tmate using the package manager'
+    required: false
+    default: 'true'
