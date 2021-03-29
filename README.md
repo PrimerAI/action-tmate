@@ -54,6 +54,25 @@ jobs:
         sudo: false
 ```
 
+## Without installing package manager dependencies
+
+By default we install `openssh-client` and `xz-utils` using `apt-get`. If you don't want or need this dependencies set `install-linux-dependencies` to `false`
+
+```yaml
+name: CI
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3
+      with:
+        install-linux-dependencies: false
+```
+
+
 ## Timeout
 
 By default the tmate session will remain open until the workflow times out. You can [specify your own timeout](https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstepstimeout-minutes) in minutes if you wish to reduce GitHub Actions usage.
