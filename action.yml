@@ -13,3 +13,7 @@ inputs:
     description: 'If only the public SSH keys of the user triggering the workflow should be authorized'
     required: false
     default: 'false'
+  install-linux-dependencies:
+    description: 'If Linux system dependencies should be installed'
+    required: false
+    default: 'true'
