@@ -14,6 +14,6 @@ inputs:
     required: false
     default: 'false'
   install-linux-dependencies:
-    description: 'this step install installation of any dependencies for tmate using the package manager'
+    description: 'If Linux system dependencies should be installed'
     required: false
     default: 'true'
